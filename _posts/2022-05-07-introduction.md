@@ -6,7 +6,7 @@ tags:
   - Blog Update
 ---
 
-Welcome to my Blog. Here I will do my best to give occasional expositions on topics that I find, interesting, profound, or meaningful. I'm not sure what kind of trajectory this blog will take, but I'm hoping that these posts will each serve as self-contained tutorials that provide a deep-dive into a technical topic that I find to be interesting or relevant to my area of research. In these posts, I will do my best to make the content accessible to readers with a technical background, while not providing redundant information that would otherwise be a Google search away.
+Welcome to my blog! Here I will do my best to give occasional expositions on topics that I find, interesting, profound, or meaningful. I'm not sure what kind of trajectory this blog will take, but I'm hoping that these posts will each serve as self-contained tutorials that provide a deep-dive into a technical topic that I find to be interesting or relevant to my area of research. In these posts, I will do my best to make the content accessible to readers with a technical background, while not providing redundant information that would otherwise be a Google search away.
 
 I am not sure yet if I have the time (or self-discipline) to maintain a regular upload schedule. Ideally, I am aiming to upload at least one post per month. Below are some of the topics (in no particular order) that I am thinking of posting on in the coming months:
 
