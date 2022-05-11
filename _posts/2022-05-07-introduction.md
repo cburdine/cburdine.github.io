@@ -27,3 +27,7 @@ As I upload and document more of my personal projects on this site, I may also w
 <img src='/images/500x300.png'>
 </p>
 </div>
+
+Latex Test:
+
+$$ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
