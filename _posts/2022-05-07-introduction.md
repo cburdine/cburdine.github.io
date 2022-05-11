@@ -24,7 +24,7 @@ As I upload and document more of my personal projects on this site, I may also w
 
 <div id="html" markdown="0">
 <p align="center">
-<img src='/images/500x300.png'>
+<img src='/images/posts/undecidability-dominoes.svg'>
 </p>
 </div>
 
