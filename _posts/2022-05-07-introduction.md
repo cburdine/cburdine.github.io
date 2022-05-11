@@ -22,3 +22,6 @@ I am not sure yet if I have the time (or self-discipline) to maintain a regular 
 
 As I upload and document more of my personal projects on this site, I may also write a few blog posts detailing my progress on those. I will do my best to keep things sorted under different tags to avoid this blog becoming a spaghettified repository of information.
 
+<div id="html" markdown="0">
+<img src='/images/500x300.png'>
+</div>
