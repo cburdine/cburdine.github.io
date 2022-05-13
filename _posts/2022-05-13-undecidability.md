@@ -52,9 +52,9 @@ Surprisingly, the answer to our question above is _no, there exists no method fo
 
 To the reader encountering the concept of undecidability for the first time, it might seem strange that we can actually _prove_ that no methods exist for determining if solutions exist to certain problems. After all, there are infinitely many methods one could propose to check if solutions exist, and showing that all of these methods fail seems to be an insurmountable task. Fortunately, we can avoid all of this exhaustive method checking by attempting a _proof by contradiction_; namely, we will show that the existence of a method that answers the question above results in some kind of logical paradox (a _contradiction_) and therefore the method cannot exist. To make things a bit more manageable, we will break up the proof into three steps:
 
-> I.  First, we will need to come up with some way of formally defining a what a "method" is. \
-> II.  Next, we will need to organize all such methods into some kind of list and ensure that every method is included. \
-> III.  Finally, we will show that if a method exists that answers the domino question, it cannot possibly be contained in the list, which is a contradiction.
+I.  First, we will need to come up with some way of formally defining a what a "method" is. \
+II.  Next, we will need to organize all such methods into some kind of list and ensure that every method is included. \
+III.  Finally, we will show that if a method exists that answers the domino question, it cannot possibly be contained in the list, which is a contradiction.
 
 In the remainder of this post, we will cover Step I. Steps II and III will be covered in the next post (Part 2 of 2).
 
@@ -78,7 +78,7 @@ According to the thesis, if we want to show that some property holds for all pos
 
 During a computation, the read/write head of the TM is in one of a finite number of defined states. One of these states is designated the _Start_ state, and another the _Stop_ state. The TM begins in the Start state with the head positioned on the first cell.  Some finite sequence of "1"s and "0"s are initialized on the tape as input, with the remaining symbols filled in with the blank symbol ("\_"). At each step, the Turing machine reads the symbol on the tape underneath the read/write head. Then, depending on the state of the read/write head, the head will write a new symbol to the tape ("1", "0", or "\_") and then either move left or right and transition into another state. Once the machine enters the Stop state, the machine stops computing, and whatever is left on the machine's tape (excluding the "\_" symbols) is considered the output. The rules for writing symbols, moving the head, and transitioning between states can be summarized in a table, such as the one below:
 
-| (State , Read) | Write   | Move | Next  State |
+| (State , Read Symbol) | Write Symbol  | Move | Next  State |
 | ---------------| ------- | ---- | ------------|
 | (Start, "0")   | "0"     | R    | A           |
 | (Start, "1")   | "1"     | R    | B           |
