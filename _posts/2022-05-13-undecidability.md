@@ -11,9 +11,9 @@ In mathematics, it is often assumed that every _yes_ or _no_ question that is we
 
 ### The Domino Problem
 
-Consider the following problem. Suppose we are given a finite set of dominoes $\mathcal{D} = \{ D_1, D_2, D_3, ... D_N \}$, where each domino $D_i$ contains two finite sequences consisting of symbols from the set $~\Sigma = \{ \clubsuit, \spadesuit,  \underline{\diamondsuit}, \heartsuit \}$. The first sequence is printed along the top of the domino, while the second is printed along the bottom. Sequences of length 0 are allowed. The task is to find a sequence of dominoes from $\mathcal{D}$ arranged horizontally, such that the sequence of symbols read across the top of the dominoes (from left to right) is the same as the sequence of symbols read across the bottom (from left to right). Repeats of dominoes in $D$ are allowed, but the flipping or rotation of dominoes is forbidden. If such a sequence of dominoes satisfies these conditions, we say that it is _balanced_.
+Consider the following problem. Suppose we are given a finite set of dominoes $\mathcal{D} = \lbrace D_1, D_2, D_3, ... D_N \rbrace$, where each domino $D_i$ contains two finite sequences consisting of symbols from the set $~\Sigma = \lbrace \clubsuit, \spadesuit, \diamondsuit, \heartsuit \rbrace$. The first sequence is printed along the top of the domino, while the second is printed along the bottom. Sequences of length 0 are allowed. The task is to find a sequence of dominoes from $\mathcal{D}$ arranged horizontally, such that the sequence of symbols read across the top of the dominoes (from left to right) is the same as the sequence of symbols read across the bottom (from left to right). Repeats of dominoes in $D$ are allowed, but the flipping or rotation of dominoes is forbidden. If such a sequence of dominoes satisfies these conditions, we say that it is _balanced_.
 
-For example, consider the following set of dominoes, $\mathcal{D} = \{ D_1, ..., D_5\}$:
+For example, consider the following set of dominoes, $\mathcal{D} = \lbrace D_1, ..., D_5\rbrace$:
 
 <div id="html" markdown="0">
 <p align="center">
@@ -21,7 +21,7 @@ For example, consider the following set of dominoes, $\mathcal{D} = \{ D_1, ...,
 </p>
 </div>
 
-We can arrange dominoes from $\mathcal{D}$ in the order $D_3, D_5, D_1, D_1, D_2, D_4$. This is a balanced domino sequence, since we can read the sequence of symbols $\heartsuit\underline{\diamondsuit}\spadesuit\underline{\diamondsuit}\underline{\diamondsuit}\clubsuit\spadesuit\clubsuit\heartsuit$ across both the top and bottom:
+We can arrange dominoes from $\mathcal{D}$ in the order $D_3, D_5, D_1, D_1, D_2, D_4$. This is a balanced domino sequence, since we can read the sequence of symbols $\heartsuit\diamondsuit\spadesuit\diamondsuit\diamondsuit\clubsuit\spadesuit\clubsuit\heartsuit$ across both the top and bottom:
 
 <div id="html" markdown="0">
 <p align="center">
@@ -29,7 +29,7 @@ We can arrange dominoes from $\mathcal{D}$ in the order $D_3, D_5, D_1, D_1, D_2
 </p>
 </div>
 
-However, if we consider the set of dominoes $\mathcal{D}' = \{ D_1, ..., D_4 \}$ where we exclude $D_5$, we can show that it is impossible to produce a balanced sequence:
+However, if we consider the set of dominoes $\mathcal{D}' = \lbrace D_1, ..., D_4 \rbrace$ where we exclude $D_5$, we can show that it is impossible to produce a balanced sequence:
 
 <div id="html" markdown="0">
 <p align="center">
@@ -76,7 +76,8 @@ According to the thesis, if we want to show that some property holds for all pos
 </p>
 </div>
 
-During a computation, the read/write head of the TM is in one of a finite number of defined states. One of these states is designated the _Start_ state, and another the _Stop_ state. The TM begins in the Start state with the head positioned on the first cell.  Some finite sequence of "1"s and "0"s are initialized on the tape as input, with the remaining symbols filled in with the blank symbol ("\_"). At each step, the Turing machine reads the symbol on the tape underneath the read/write head. Then, depending on the state of the read/write head, the head will write a new symbol to the tape ("1", "0", or "\_") and then either move left or right and transition into another state. Once the machine enters the Stop state, the machine stops computing, and whatever is left on the machine's tape (excluding the "\_" symbols) is considered the output. The rules for writing symbols, moving the head, and transitioning between states can be summarized in a table, such as the one below:
+During a computation, the read/write head of the TM is in one of a finite number of defined states. One of these states is designated the _Start_ state, and another the _Stop_ state. The TM begins in the Start state with the head positioned on the first cell.  Some finite sequence of "1"s and "0"s are initialized on the tape as input, with the remaining symbols filled in with the blank symbol ("\_"). At each step, the Turing machine reads the symbol on the tape underneath the read/write head. Then, depending on the state of the read/write head, the head will write a new symbol to the tape ("1", "0", or "\_") and then either move left or right and transition into another state. Once the machine enters the Stop state, the machine stops computing, and whatever is left on the machine's tape (excluding the "\_" symbols) is considered the output. The rules for writing symbols, moving the head, and transitioning between states can be summarized in a table, such as the one below:\
+\
 
 | (State , Read Symbol) | Write Symbol  | Move | Next  State |
 | ---------------| ------- | ---- | ------------|
@@ -89,7 +90,7 @@ During a computation, the read/write head of the TM is in one of a finite number
 | (B, "0")       | "1"     | R    | Start       |
 | (B, "1")       | "1"     | R    | Start       |
 | (B, "\_")      | "1"     | L    | Stop        |
-
+\
 
 The table above describes the program of a TM with four states (Start, A, B, Stop), which copies every other bit of the input one cell to the right. Notice that for each state-symbol pair (excluding the "Stop" state), the read/write head has a defined behavior. For example, running the above TM on the input sequence "00100" results in an output of "001100":
 
