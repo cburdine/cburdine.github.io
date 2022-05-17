@@ -62,7 +62,7 @@ To make things a bit more manageable, we will break up the proof into three step
 
 In the remainder of this post, we will cover Step I. Steps II and III will be covered in the next post (Part 2 of 2).
 
-### I. Introducing Turing Machines
+## I. Introducing Turing Machines
 What do we mean when we say that there is a "method" for solving certain kinds of problems? In fact, how should we define what a "method" is? 
 
 One (quite reasonable) definition for a "method" is any process that can converted into computer code and executed on a computer. This code accepts some problem parameters as input and simply returns _yes_ or _no_ as output. However, we note that not all computers or computer programs are created equal. Some computers can perform billions of operations a second, while others (such as my brain) have difficulty multiplying numbers with four or more digits. Also, some computers have interpreters that can execute code written in many different [programming languages](https://en.wikipedia.org/wiki/Programming_language), while others can only run a single type of program written in [assembly language](https://en.wikipedia.org/wiki/Assembly_language). If we think all "methods" can be converted into computer programs, how do we account for differences in the hardware executing these programs and the languages the programs are written in? 
