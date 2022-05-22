@@ -37,7 +37,7 @@ It we let $\lbrace 0, 1 \rbrace^*$ denote the set of finite binary input strings
 
 $$M : \lbrace 0, 1 \rbrace^* \rightarrow \lbrace 0, 1 \rbrace$$
 
-that is, for every finite input string $w$ in $\lbrace 0, 1 \rbrace^{*}$ , $M$ has an associated output, either $1$ or $0$. However, it might be possible that for some input $w$ in the set $\lbrace 0,1\rbrace^*$, a given TM never enters the Stop state. Instead, it might get stuck in a loop, or endlessly write over more and more of the blank ("\_") cells on its tape. This is why we often refer to TMs as _partial functions_, meaning if we want to treat $M$ like a function on $\lbrace 0, 1 \rbrace^*$, then it is only defined on inputs where $M$ eventually stops. 
+that is, for every finite input string $w$ in $\lbrace 0, 1 \rbrace^*$, $M$ has an associated output, either 1 or 0. However, it might be possible that for some input $w$ in the set $\lbrace 0,1\rbrace^*$, a given TM never enters the Stop state. Instead, it might get stuck in a loop, or endlessly write over more and more of the blank ("\_") cells on its tape. This is why we often refer to TMs as _partial functions_, meaning if we want to treat $M$ like a function on $\lbrace 0, 1 \rbrace^*$, then it is only defined on inputs where $M$ eventually stops. 
 
 
 ### Correspondence with the Real Numbers
