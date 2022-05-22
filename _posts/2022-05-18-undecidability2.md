@@ -33,11 +33,11 @@ If some $M$ is not included in this list, then we have $N_{M_{i-1}} < N_M < N_{M
 
 Recall that the _input_ to a TM is the finite binary string initialized on the TM's tape prior to computation. The _output_ of a TM is the finite binary string left on the TM's tape when it enters the Stop state. In the special case of decision problems (where the TM outputs a "yes" or "no" answer), we will make the simplifying assumption that the output of the TM is simply the symbol left on the first cell on the TM's tape after it enters the Stop state, ignoring the rest of the output.
 
-It we let $\lbrace 0, 1 \rbrace^*$ denote the set of finite binary input strings, it might be tempting to simply think of TMs that solve decision problems as functions of the form:
+It we let $\lbrace 0, 1 \rbrace^\ast$ denote the set of finite binary input strings, it might be tempting to simply think of TMs that solve decision problems as functions of the form:
 
 $$M : \lbrace 0, 1 \rbrace^* \rightarrow \lbrace 0, 1 \rbrace$$
 
-that is, for every finite input string $w$ in $\lbrace 0, 1 \rbrace^*$, $M$ has an associated output, either 1 or 0. However, it might be possible that for some input $w$ in the set $\lbrace 0,1\rbrace^*$, a given TM never enters the Stop state. Instead, it might get stuck in a loop, or endlessly write over more and more of the blank ("\_") cells on its tape. This is why we often refer to TMs as _partial functions_, meaning if we want to treat $M$ like a function on $\lbrace 0, 1 \rbrace^*$, then it is only defined on inputs where $M$ eventually stops. 
+that is, for every finite input string $w$ in $\lbrace 0, 1 \rbrace^\ast$, $M$ has an associated output, either 1 or 0. However, it might be possible that for some input $w$ in the set $\lbrace 0,1\rbrace^\ast$, a given TM never enters the Stop state. Instead, it might get stuck in a loop, or endlessly write over more and more of the blank ("\_") cells on its tape. This is why we often refer to TMs as _partial functions_, meaning if we want to treat $M$ like a function on $\lbrace 0, 1 \rbrace^*$, then it is only defined on inputs where $M$ eventually stops. 
 
 
 ### Correspondence with the Real Numbers
