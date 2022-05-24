@@ -24,4 +24,5 @@ group :jekyll_plugins do
   gem "jekyll-feed"
   gem 'jekyll-sitemap'
   gem 'hawkins'
+  gem 'webrick' # <-- added to fix Ruby 3.0 dependency issue
 end
