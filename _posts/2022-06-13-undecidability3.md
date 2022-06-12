@@ -132,7 +132,7 @@ where each $c_i$ is a symbol in $\Sigma'$. Next, we augment ${\mathcal{D}_{M,w}}
 </p>
 </div>
 
-Since the green domino in ${\tilde{\mathcal{D}}_{M,w}}$ is the only one that begins with "$\ast$" on the top and bottom, it must come first in a balanced sequence. Furthermore, we see that any balanced sequence of dominoes in $\mathcal{D}_{M,w}$ that begins with the green domino corresponds uniquely to a balanced sequence of the modified dominoes, provided that we place the special orange domino in ${\tilde{\mathcal{D}}_{M,w}}$ at the end of this modified sequence. This orange domino is necessary to balance the extraneous "${\ast}$" symbol that appears at the end of the bottom of the modified sequence.
+Since the green domino in ${ {\tilde{\mathcal{D}}}_{M,w} }$ is the only one that begins with "${ \ast }$" on the top and bottom, it must come first in a balanced sequence. Furthermore, we see that any balanced sequence of dominoes in $\mathcal{D}_{M,w}$ that begins with the green domino corresponds uniquely to a balanced sequence of the modified dominoes, provided that we place the special orange domino in ${\tilde{\mathcal{D}}_{M,w}}$ at the end of this modified sequence. This orange domino is necessary to balance the extraneous "${\ast}$" symbol that appears at the end of the bottom of the modified sequence.
 
 This proves that $\tilde{\mathcal{D}}_{M,w}$ has a balanced sequence if and only if the Turing Machine $M$ eventually halts on the input $w$, that is, the domino problem is reducible to the halting problem. However, we established previously that the halting problem is undecidable, which implies that the domino problem must be as well.
 
