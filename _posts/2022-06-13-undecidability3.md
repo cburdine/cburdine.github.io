@@ -52,7 +52,7 @@ $$\begin{aligned}
 \square &\mapsto \spadesuit\diamondsuit
 \end{aligned}$$
 
-If we are given a TM $M$ and an input $w$, we assume canonically that the TM begins with its head positioned at the first cell of its tape (the tape is initialized with the $w$ string). $M$ performs its computation by printing 0 or 1 symbols and moving left or right. At any given timestep, we can encode a complete snapshot of the TM's internal state, head position, and tape into a sequence of symbols from $\Sigma'$. First, we use the $ symbol to signify the beginning of the tape and proceed to add all of the 1 and 0 symbols to the left of the head. We then encode the position of the head and the internal state as a binary number enclosed by the "$\mid$" symbol. For example, to encode a head in the 5th state, $S_5$, we would use "${\mid}101{\mid}$". If there are $N$ states the TM can be in, we can encode the state's number in binary using at most $\log_2(N) + 1$ symbols. We then add the rest of the tape beneath and to the right of the TM's head up until the first blank ("_") symbol occurs on the tape. In the figure below, we give some examples of this encoding of a TM at various steps:
+If we are given a TM $M$ and an input $w$, we assume canonically that the TM begins with its head positioned at the first cell of its tape (the tape is initialized with the $w$ string). $M$ performs its computation by printing 0 or 1 symbols and moving left or right. At any given timestep, we can encode a complete snapshot of the TM's internal state, head position, and tape into a sequence of symbols from $\Sigma'$. First, we use the "${\$}$" symbol to signify the beginning of the tape and proceed to add all of the 1 and 0 symbols to the left of the head. We then encode the position of the head and the internal state as a binary number enclosed by the "$\mid$" symbol. For example, to encode a head in the 5th state, $S_5$, we would use "${\mid}101{\mid}$". If there are $N$ states the TM can be in, we can encode the state's number in binary using at most $\log_2(N) + 1$ symbols. We then add the rest of the tape beneath and to the right of the TM's head up until the first blank ("_") symbol occurs on the tape. In the figure below, we give some examples of this encoding of a TM at various steps:
 
 <div id="html" markdown="0">
 <p align="center">
@@ -60,7 +60,7 @@ If we are given a TM $M$ and an input $w$, we assume canonically that the TM beg
 </p>
 </div>
 
-Using these encodings, we will attempt to construct a domino set $\mathcal{D}$ such that any balanced sequence will correspond with a valid sequence of these TM shapshots delimited by the "\$ " character. Note that we have not yet used the "$\ast$" or "$\square$" symbols in $\Sigma'$- we will introduce these symbols later. 
+Using these encodings, we will attempt to construct a domino set $\mathcal{D}$ such that any balanced sequence will correspond with a valid sequence of these TM shapshots delimited by the "${\mathdollar}$" character. Note that we have not yet used the "$\ast$" or "$\square$" symbols in $\Sigma'$- we will introduce these symbols later. 
 
 To denote the transitions in state within a TM, we will use the following shorthand notation. For a transition from state $S_n$ to $S_{n'}$, we write:
 
@@ -98,7 +98,7 @@ Upon closer inspection, we see that any sequence of yellow dominoes in $\mathcal
 
 * Finally, the red domino is needed to balance out the last fully-contracted snapshot. It ends with an empty snapshot (i.e. "$\textdollar\textdollar$").
 
-To give an example, consider the TM that prints three "1"s. Once the TM reaches the Stop state, its last state snapshot is "$\textdollar1{\mid}100{\mid}11\textdollar$". One possible tape contraction sequence is:
+To give an example, consider the TM that prints three "1"s. Once the TM reaches the Stop state, its last state snapshot is "$\textdollar 1{\mid}100{\mid}11\textdollar$". One possible tape contraction sequence is:
 
 $$ \$1|100|11\$ 1|100|1\$ |100|1\$ |100|\$\$ $$
 
