@@ -41,7 +41,7 @@ that is, for every finite input string $w$ in $\lbrace 0, 1 \rbrace^\ast$, $M$ h
 
 
 ### Correspondence with the Real Numbers
-So, it seems be the case that there are some functions of the form $f : \lbrace 0, 1 \rbrace^* \rightarrow \lbrace 0, 1 \rbrace$ that are not realizable as TMs. Recall that our goal in this proof is to eventually show that the domino problem is one of these functions. Some questions we might want to think about first are: _How rare are these kinds of functions f?_ and _Can we perhaps construct one of these?_
+So, it seems be the case that there are some functions of the form $f : \lbrace 0, 1 \rbrace^* \rightarrow \lbrace 0, 1 \rbrace$ that are not realizable as TMs. Recall that our goal in this proof is to eventually show that the domino problem is one of these functions. Some questions we might want to think about first are: _How rare are these kinds of functions $f$?_ and _Can we perhaps construct one of these?_
 
 Let's consider the first question. Interestingly, we can show that not only are there infinitely many such functions $f$, but there are as many $f$s as there are real numbers! The proof of this is as follows: Since each item in $\lbrace 0, 1 \rbrace^*$ can be interpreted as an integer in binary, we can enumerate the members of this set as a sequence $w_1, w_2, w_3, ...$, from which we can construct the infinite binary sequence $f(w_1), f(w_2), f(w_3), ...$ and so on. Each of these binary sequences can be uniquely interpreted as [real binary numbers](https://en.wikipedia.org/wiki/Binary_number#Representing_real_numbers) on the interval $[0,1]$ by prepending "0." to them. For example:
 
