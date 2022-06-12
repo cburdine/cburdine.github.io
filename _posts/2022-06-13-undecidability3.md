@@ -124,7 +124,7 @@ $$\begin{aligned}
 \phi_{LR}(c_1c_2c_3...c_n) &= {\ast}c_1{\ast}c_2{\ast}c_3{\ast} ... {\ast}c_n{\ast} \\
 \end{aligned}$$
 
-where each $c_i$ is a symbol in $\Sigma'$. Next, we augment ${\mathcal{D}_{M,w}}$ to produce the domino set ${\tilde{\mathcal{D}}_{M,w}}$:
+where each $c_i$ is a symbol in $\Sigma'$. Next, we augment ${\mathcal{D}\_{M,w}}$ to produce the domino set ${\tilde{\mathcal{D}}_{M,w}}$:
 
 <div id="html" markdown="0">
 <p align="center">
