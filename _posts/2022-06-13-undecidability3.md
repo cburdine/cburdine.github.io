@@ -94,9 +94,9 @@ Upon closer inspection, we see that any sequence of yellow dominoes in $\mathcal
 
 * The blue dominoes are necessary to avoid the problem of leftover symbols on the TM's tape. Once a final purple domino is added (i.e.  one that represents the TM transitioning into the Stop state), the string on the top of the domino sequence will be balanced with the string across the bottom up until the snapshot of the TM's final state, which is not included in the top. That is, the bottom is longer than the top by one snapshot. We remark that this disparity was first introduced by the green domino. To remedy this, we must include the blue dominoes, which are used to slowly erase the symbols on the tape to the left and right of the head until the top and bottom are balanced out. We achieve this by appending additional TM snapshots, where each snapshot erases one tape symbol to the right or left of the head. The remaining symbols on the tape that are not erased are copied between snapshots using the yellow dominoes. We call this process "tape contraction", and it solves the problem of the bottom string being longer by allowing the top to eventually "catch up" with the bottom.
 
-* Finally, the red domino is needed to balance out the last fully-contracted snapshot. It ends with an empty snapshot (i.e. "$\$\$$").
+* Finally, the red domino is needed to balance out the last fully-contracted snapshot. It ends with an empty snapshot (i.e. "$\textdollar\textdollar$").
 
-To give an example, consider the TM that prints three "1"s. Once the TM reaches the Stop state, its last state snapshot is "$\$1{\mid}100{\mid}11\$$". One possible tape contraction sequence is:
+To give an example, consider the TM that prints three "1"s. Once the TM reaches the Stop state, its last state snapshot is "$\textdollar1{\mid}100{\mid}11\textdollar$". One possible tape contraction sequence is:
 
 $$ \$1|100|11\$ 1|100|1\$ |100|1\$ |100|\$\$ $$
 
@@ -130,7 +130,7 @@ where each $c_i$ is a symbol in $\Sigma'$. Next, we augment $\mathcal{D}_{M,w}$ 
 </p>
 </div>
 
-Since the green domino in $\tilde{\mathcal{D}}_{M,w}$ is the only one that begins with "$\mathcal{*}$" on the top and bottom, it must come first in a balanced sequence. Furthermore, we see that any balanced sequence of dominoes in $\mathcal{D}_{M,w}$ that begins with the green domino corresponds uniquely to a balanced sequence of the modified dominoes, provided that we place the special orange domino in $\tilde{\mathcal{D}}_{M,w}$ at the end of this modified sequence. This orange domino is necessary to balance the extraneous "$\ast$" symbol that appears at the end of the bottom of the modified sequence.
+Since the green domino in $\tilde{\mathcal{D}}_{M,w}$ is the only one that begins with "$\ast$" on the top and bottom, it must come first in a balanced sequence. Furthermore, we see that any balanced sequence of dominoes in $\mathcal{D}_{M,w}$ that begins with the green domino corresponds uniquely to a balanced sequence of the modified dominoes, provided that we place the special orange domino in $\tilde{\mathcal{D}}_{M,w}$ at the end of this modified sequence. This orange domino is necessary to balance the extraneous "$\ast$" symbol that appears at the end of the bottom of the modified sequence.
 
 This proves that $\tilde{\mathcal{D}}_{M,w}$ has a balanced sequence if and only if the Turing Machine $M$ eventually halts on the input $w$, that is, the domino problem is reducible to the halting problem. However, we established previously that the halting problem is undecidable, which implies that the domino problem must be as well.
 
