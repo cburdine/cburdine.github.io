@@ -41,7 +41,7 @@ We observe that if the Halting problem were decidable (meaning there is a TM $M_
 
 This suggests asking if the converse holds for decidability: _What if the domino problem were decidable? Would that imply the halting problem is decidable?_ We claim that the answer to this question is in fact _yes,_ but proving it is a non-trivial task. If we _can_ prove it, we have effectively shown that the domino problem is undecidable, since if any TM $M_N$ in the enumeration $M_1, M_2, M_3, ...$ decides the domino problem, then there must exist some TM $M_H$ we can construct that decides the halting problem. This is a contradiction, so $M_N$ is in fact not contained in the enumeration, meaning the problem is undecidable. This  proof method showing that the decidability of one problem implies the decidability of another is called _reduction_. If the decidability of problem $A$ implies the decidability of problem $B$, we say that $B$ _is reducible to_ $A$.
 
-Our reduction argument will proceed as follows. First, we will show that for any given TM $M$ and input $w$, we will construct a set of dominoes $\mathcal{D}$ that has a balanced sequence if and only if the TM $M$ eventually halts on input $w$. We can accomplish this by encoding the state transition rules of the TM into $\mathcal{D}$ such that if a balanced sequence exist, the sequence of symbols read across the top and bottom of a balanced sequence can be interpreted a sequence of steps the TM will make until it halts. If $M$ eventually halts, this sequence of dominoes will terminate in a balanced sequence; otherwise no balanced sequence will exist. Previously, we defined the set of valid symbols as $\Sigma = \lbrace \clubsuit, \spadesuit, \diamondsuit, \heartsuit \rbrace$. For convenience in annotating our dominoes, we shall relabel these symbols using the larger alphabet $\Sigma' = \lbrace 0, 1, \mid, \$, \ast , \square\rbrace$. We are free to introduce any larger alphabet $\Sigma'$, since we can map each symbol in $\Sigma'$ to a sequence of one or more symbols in $\Sigma$ of length at most $\log_4(\Sigma')+1$. For example, we could use the mapping:
+Our reduction argument will proceed as follows. First, we will show that for any given TM $M$ and input $w$, we will construct a set of dominoes $\mathcal{D}$ that has a balanced sequence if and only if the TM $M$ eventually halts on input $w$. We can accomplish this by encoding the state transition rules of the TM into $\mathcal{D}$ such that if a balanced sequence exist, the sequence of symbols read across the top and bottom of a balanced sequence can be interpreted a sequence of steps the TM will make until it halts. If $M$ eventually halts, this sequence of dominoes will terminate in a balanced sequence; otherwise no balanced sequence will exist. Previously, we defined the set of valid symbols as $\Sigma = \lbrace \clubsuit, \spadesuit, \diamondsuit, \heartsuit \rbrace$. For convenience in annotating our dominoes, we shall relabel these symbols using the larger alphabet $\Sigma' = \lbrace 0, 1, \mid, \textdollar, \ast , \square\rbrace$. We are free to introduce any larger alphabet $\Sigma'$, since we can map each symbol in $\Sigma'$ to a sequence of one or more symbols in $\Sigma$ of length at most $\log_4(\Sigma')+1$. For example, we could use the mapping:
 
 $$\begin{aligned}
 0 &\mapsto \clubsuit\clubsuit \\
@@ -63,13 +63,15 @@ If we are given a TM $M$ and an input $w$, we assume canonically that the TM beg
 Using these encodings, we will attempt to construct a domino set $\mathcal{D}$ such that any balanced sequence will correspond with a valid sequence of these TM shapshots delimited by the "\$ " character. Note that we have not yet used the "$\ast$" or "$\square$" symbols in $\Sigma'$- we will introduce these symbols later. 
 
 To denote the transitions in state within a TM, we will use the following shorthand notation. For a transition from state $S_n$ to $S_{n'}$, we write:
+
 $$S \xrightarrow[(s_{\text{w}},D)]{(s_{\text{r}})} S'$$
 
 where $s_r$ is the symbol read by the TM head, $s_w$ is the written symbol, and $D$ is the direction of the head's movement (either $R$ or $L$).
 
 As an example, consider a simple TM that begins with an empty input string $w$, prints three "1"s, and finally moves the head left one cell prior to stopping. This TM will transition between incremental states to keep track of how many 1s have been printed. The state transition sequence of this TM is:
 
-$$S_{\text{start}} \equiv S_0 \xrightarrow[(1,R)]{(\_)} S_1 \xrightarrow[(1,R)]{(\_)} S_2 \xrightarrow[(1,L)]{(\_)} S_3 \equiv S_{\text{end}}$$
+$$S_{\text{start}} \equiv S_0 \xrightarrow[(1,R)]{(\_)} S_1 \xrightarrow[(1,R)]{(\_)} S_2 \xrightarrow[(1,L)]{(\_)} S_3 \equiv S_{\text{stop}}$$
+
 The sequence of snapshots for these state transitions is:
 
 $$ \$|0|\$1|1|\$11|10|\$11|11|\$1|100|11\$ $$
@@ -130,7 +132,7 @@ where each $c_i$ is a symbol in $\Sigma'$. Next, we augment $\mathcal{D}_{M,w}$ 
 </p>
 </div>
 
-Since the green domino in $\tilde{\mathcal{D}}_{M,w}$ is the only one that begins with "$\ast$" on the top and bottom, it must come first in a balanced sequence. Furthermore, we see that any balanced sequence of dominoes in $\mathcal{D}_{M,w}$ that begins with the green domino corresponds uniquely to a balanced sequence of the modified dominoes, provided that we place the special orange domino in $\tilde{\mathcal{D}}_{M,w}$ at the end of this modified sequence. This orange domino is necessary to balance the extraneous "$\ast$" symbol that appears at the end of the bottom of the modified sequence.
+Since the green domino in ${\tilde{\mathcal{D}}_{M,w}}$ is the only one that begins with "$\ast$" on the top and bottom, it must come first in a balanced sequence. Furthermore, we see that any balanced sequence of dominoes in $\mathcal{D}_{M,w}$ that begins with the green domino corresponds uniquely to a balanced sequence of the modified dominoes, provided that we place the special orange domino in $\tilde{\mathcal{D}}_{M,w}$ at the end of this modified sequence. This orange domino is necessary to balance the extraneous "$\ast$" symbol that appears at the end of the bottom of the modified sequence.
 
 This proves that $\tilde{\mathcal{D}}_{M,w}$ has a balanced sequence if and only if the Turing Machine $M$ eventually halts on the input $w$, that is, the domino problem is reducible to the halting problem. However, we established previously that the halting problem is undecidable, which implies that the domino problem must be as well.
 
