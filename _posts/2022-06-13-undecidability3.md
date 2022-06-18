@@ -116,7 +116,7 @@ In the general case, a complete balanced sequence looks like the following sketc
 
 We observe that a balanced sequence in $\mathcal{D}_{M,w}$ beginning with the green domino exists if and only if $M$ eventually enters the stop state when run on input $w$. It is worth remarking that the balanced sequence isn't necessarily unique, since the order in which we use the blue dominoes to contract the symbols left on the TM's tape may not be unique.
 
-There is one last wrinkle in our proof that we must iron out. We have assumed so far that every sequence _must_ begin with the green domino. In the original problem statement, we did not impose any such restrictions. We can resolve this by using the symbols "$\ast$" and "$\square$" in $\Sigma'$ to "force" the green domino to be used first. First, we introduce the string operators $\phi_L, \phi_R, \phi_{LR}$, which act on a strings comprised of symbols in $\Sigma'$. These operators interlace the "$\ast$" character between each character. In particular, we define:
+There is one last wrinkle in our proof that we must iron out. We have assumed so far that every sequence _must_ begin with the green domino. In the original problem statement, we did not impose any such restrictions. We can resolve this by using the symbols "$\ast$" and "$\square$" in $\Sigma'$ to "force" the green domino to be used first. First, we introduce the string operators $\phi_L, \phi_R, \phi_{LR}$, which act on a strings comprised of symbols in $\Sigma'$. These operators interlace the "$\ast$" symbol between each symbol in the string. In particular, we define:
 
 $$\begin{aligned}
 \phi_L(c_1c_2c_3...c_n) &= {\ast}c_1{\ast}c_2{\ast}c_3{\ast} ... {\ast}c_n \\
@@ -134,7 +134,7 @@ where each $c_i$ is a symbol in $\Sigma'$. Next, we augment ${\mathcal{D}\_{M,w}
 
 Since the green domino in $\tilde{\mathcal{D}}\_{M,w}$ is the only one that begins with "${\ast}$" on the top and bottom, it must come first in a balanced sequence. Furthermore, we see that any balanced sequence of dominoes in $\mathcal{D}_{M,w}$ that begins with the green domino corresponds uniquely to a balanced sequence of the modified dominoes, provided that we place the special orange domino in ${\tilde{\mathcal{D}}\_{M,w}}$ at the end of this modified sequence. This orange domino is necessary to balance the extraneous "${\ast}$" symbol that appears at the end of the bottom of the modified sequence.
 
-This proves that $\tilde{\mathcal{D}}_{M,w}$ has a balanced sequence if and only if the Turing Machine $M$ eventually halts on the input $w$, that is, the domino problem is reducible to the halting problem. However, we established previously that the halting problem is undecidable, which implies that the domino problem must be as well.
+This proves that $\tilde{\mathcal{D}}_{M,w}$ has a balanced sequence if and only if the Turing Machine $M$ eventually halts on the input $w$. This means that the domino problem is reducible to the halting problem. We established previously that the halting problem is undecidable, which implies that the domino problem must be as well.
 
 ## Concluding Remarks
 
