@@ -18,6 +18,13 @@ I am currently working in [Dr. E. P. Blair's](http://web.ecs.baylor.edu/faculty/
 
 I have also contributed to the [SAGE](https://sagecontinuum.org/) project, which seeks to develop infrastructure for AI/ML applications on edge devices. In particular, I have contributed to the [Waggle Sensor Project](https://github.com/waggle-sensor) project, which is an open source platform for developing intelligent sensor networks.
 
+Materials + ML Course
+------
+
+![Materials + ML](images/matml_logo.svg)
+
+I am in the process of developing an open-source introductory workshop course in Machine Learning and its applications in Materials Science. I lead the first iteration of this workshop at Bayloy University in Summer 2023, and plan to continue revising and expanding the online content for the course. All course materials including lecture slides, recordings, Python code, etc. are available [here](https://cburdine.github.io/materials-ml-workshop) for free.
+
 About this Website
 ------
 My aim in creating this site is a have place to document some of my projects, both academic and non-academic. I am also hoping to upload the occasional blog post, which may cover topics within and adjacent to my research interests.
