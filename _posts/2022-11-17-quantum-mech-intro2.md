@@ -1,7 +1,7 @@
 ---
 title: 'Intro to Quantum Mechanics (Part I)'
 date: 2022-11-20
-permalink: /posts/2022/06/quantumcomputing/
+permalink: /posts/2022/11/quantum2/
 tags:
   - Physics
   - Statistics
