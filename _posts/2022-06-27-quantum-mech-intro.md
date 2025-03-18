@@ -23,9 +23,9 @@ Planck's discovery showed that fields of electromagnetic radiation that were onc
 
 $$p = \frac{E}{c} = \frac{h\nu}{c} = \frac{h\nu}{(\nu \lambda)} = \frac{h}{\lambda}\quad \Rightarrow\quad \lambda = h/p$$
 
-Remarkably, de Broglie's prediction of the existence of a "matter wave" turned out to be correct, and has since verified through many experiments, such as the famous electron [double-slit experiment](https://en.wikipedia.org/wiki/Double-slit_experiment). These experiments showed that particles with mass can also have wave-like properties, exhibiting interference patterns that are not seen in classical particles.
+Remarkably, de Broglie's prediction of the existence of a "matter wave" turned out to be correct, and has since been verified through many experiments, such as the famous electron [double-slit experiment](https://en.wikipedia.org/wiki/Double-slit_experiment). These experiments showed that particles with mass can also have wave-like properties, exhibiting interference patterns that are not seen in classical particles.
 
-As experimental evidence continued to blur the lines between what were once considered to be particles and waves, the field of Quantum Mechanics was born. This new field of physics sought to unite the particle and wave-like nature of objects with "quantized" energy into a single mathematical framework. In the remainder of this post we will give an introductory survey of the basic principles of Quantum Mechanics and cover a few of its core ideas.
+As experimental evidence continued to blur the lines between what were once considered to be particles and waves, the field of Quantum Mechanics was born. This new field of physics sought to unite the particle and wave-like nature of objects with "quantized" energy into a single mathematical framework. In the remainder of this post we will give an introductory survey of the basic principles of quantum mechanics and cover a few of its core ideas.
 
 ## Preliminaries
 
@@ -63,7 +63,7 @@ For $\theta = 2\pi [x/\lambda - \nu t]$, we can re-write the form of $\psi(x,t)$
 
 $$\psi(x,t) = \cos\left(2\pi\left[\frac{x}{\lambda} - \nu t\right]\right) + i\sin\left(2\pi\left[\frac{x}{\lambda} - \nu t\right]\right)$$
 
-We say that a general harmonic wave is harmonic in both time and space, since the real an imaginary components of $\psi(x,t)$ vary sinusoidally with $x$ when $t$ is held constant and with $t$ when $x$ is held constant. Because of this, a general harmonic wave is characterized by two variables, the wave frequency $\nu$ and the wavelength $\lambda$. We observe that these variables are proportional to the partial derivative of $\psi$ with respect to time and space respectively:
+We say that a general harmonic wave is harmonic in both time and space, since the real and imaginary components of $\psi(x,t)$ vary sinusoidally with $x$ when $t$ is held constant and with $t$ when $x$ is held constant. Because of this, a general harmonic wave is characterized by two variables, the wave frequency $\nu$ and the wavelength $\lambda$. Note that the inverse wavelength $1/\lambda$ corresponds to the "spatial frequency" of the wave. We observe that $\nu$ and $1/\lambda$ are proportional to the partial derivative of $\psi$ with respect to time and space respectively:
 
 $$\dfrac{\partial}{\partial t}\psi(x,t) = (-i2\pi \nu)\exp\left(i2\pi\left[ \frac{x}{\lambda} - \nu t \right]\right) = (-i2\pi \nu)\psi(x,t)$$
 
@@ -118,9 +118,9 @@ This describes a particle's kinetic energy, but what about the potential energy?
 
 Since total energy in any physical system is conserved, it must be the case that the sum of the kinetic and potential energies must equal the total energy of a wave function. To compute the total energy of an arbitrary wave function, we introduce the _Hamiltonian operator_ $\hat{\mathbf{H}}$ as follows: 
 
-$$\hat{\mathbf{H}} \equiv (\text{Kinetic Energy}) + (\text{Potential Energy}) \equiv \frac{\hat{\mathbf{p}}^2}{2m} + V(x,t)$$
+$$\hat{\mathbf{H}} \equiv (\text{kinetic energy}) + (\text{potential energy}) \equiv \frac{\hat{\mathbf{p}}^2}{2m} + V(x,t)$$
 
-The Hamiltonian operator is named after [William Rowan Hamilton](https://en.wikipedia.org/wiki/William_Rowan_Hamilton), a physicist who developed a formulation of classical mechanics by introducing operators that use the kinetic and potential components of a system's energy to describe its dynamics. Despite its origin as an operator in classical physics, the Hamiltonian operator formalism is quite useful in describing the time evolution of quantum systems as well.
+The Hamiltonian operator is named after [William Rowan Hamilton](https://en.wikipedia.org/wiki/William_Rowan_Hamilton), a physicist who developed a formulation of classical mechanics by introducing operators that use the sum of the kinetic and potential components of a system's total energy to describe its dynamics. Despite its origin as an operator in classical physics, the Hamiltonian operator formalism is quite useful in describing the time evolution of quantum systems as well.
 
 The Hamiltonian operator is quite useful in determining the initial shape of a wavefunction $\psi(x,t)$. If a wavefunction is measured to have energy $E$ at time $t = 0$, the law of conservation of energy requires that the kinetic and potential components of the wave function's energy sums to $E$ at every point $x$ in space. This means that
 
@@ -128,7 +128,7 @@ $$\boxed{E\psi(x,0) = \hat{\mathbf{H}}\psi(x,0) = \frac{-\hbar^2}{2m} \dfrac{\pa
 
 must hold for every point $x$ in space. Solving for the initial wave function $\psi(x,0)$ that satisfies this linear partial differential equation is not an easy task. Closed-form solutions to this equation can be found for simple potentials $V(x)$, but with more complex potentials the equation must be solved numerically. Also, for some potential functions $V(x)$, there are only discrete values of $E$ that can satisfy this equation. This discretization of "allowed" energy levels is an important concept we will return to later.
 
-To the attentive reader, the fact that the total energy $E$ must be constant for all values of $x$ may seem a bit confusing, especially considering that we previously claimed the wave function's kinetic energy $E_{KE}(x,t)$ was a function of position and time. The reason that $E$ is independent of $x$ at $t = 0$ is because we have _measured_ the energy of the system at time $t = 0$. The concept of _measurement_ is an important part of the theory of quantum mechanics, and we will discuss it in greater detail in a future post. For now, we will assume that when a a particle's energy is measured, it "collapses" to a constant value that is essentially independent of space.
+To the attentive reader, the fact that the total energy $E$ must be constant for all values of $x$ may seem a bit confusing, especially considering that we previously claimed the wave function's kinetic energy $E_{KE}(x,t)$ was a function of position and time. The reason that $E$ is independent of $x$ at $t = 0$ is because we have _measured_ the energy of the system at time $t = 0$. The concept of _measurement_ is an important part of the theory of quantum mechanics, and we will discuss it in greater detail in a future post. For now, we will assume that when a a particle's energy is measured, the particle's wave function "collapses" to one where $E$ is a constant value that is essentially independent of space.
 
 We know from earlier that if a wave function is measured to have energy $E$ at time $t = 0$, it will evolve in time according to the solution to the the Schrodinger equation, $\psi(x,t) = e^{-itE/\hbar}\psi(x,0)$. Since the Hamiltonian operator $\hat{\mathbf{H}}$ is a linear operator, it commutes with multiplication by scalars such as $E$ and $e^{-itE/\hbar}$. Thus, it follows that:
 
@@ -138,12 +138,12 @@ This means that if $\hat{\mathbf{H}}\psi(x,0) = E\psi(x,0)$ at $t = 0$, then $\h
 
 $$\boxed{\dfrac{\partial}{\partial t}\psi(x,t) =\frac{-i}{\hbar}\hat{\mathbf{H}}\psi(x,t)}$$
 
-Remarkably, it can be shown that this equation holds even if the system's energy is not measured to be some constant value $E$ at $t = 0$, however, we will discuss some of these more nuanced insights in a future post.
+Remarkably, it can be shown that this equation always holds, even if the system's energy is not measured to be some constant value $E$ at $t = 0$. However, we will discuss some of these more nuanced insights in a future post.
 
 ## Conclusion
-In this post, we gave a basic introduction to the Schrodinger equation. We derived it by exploring the physics of waves that are harmonic in time and space. Although it can be derived by studying these harmonic waves, the Schrodinger equation is remarkably flexible, and can describe the dynamics of physical systems that are not harmonic in space. To find the shapes of these wave functions in space, we introduced the Hamiltonian operator $\hat{\mathbf{H}}$, and observed that waves $\psi(x,t)$ with a measured energy $E$ must satisfy the equation $E\psi(x,t) = \hat{\mathbf{H}}\psi(x,t)$. Finally, we used the Hamiltonian operator to derive the more general form of the Schrodinger equation, which is independent of a wave's measured energy $E$.
+In this post, we gave a basic introduction to the Schrodinger equation. We derived it by exploring the physics of waves that are harmonic in time and space. Although it can be derived by studying these harmonic waves, the Schrodinger equation is remarkably flexible and can describe the dynamics of most quantum-mechanical systems. To find the shapes of these wave functions in space, we introduced the Hamiltonian operator $\hat{\mathbf{H}}$, and observed that waves $\psi(x,t)$ with a measured energy $E$ must satisfy the equation $E\psi(x,t) = \hat{\mathbf{H}}\psi(x,t)$. Finally, we used the Hamiltonian operator to derive the more general form of the Schrodinger equation, which is independent of a wave's measured energy $E$.
 
-In the next post, we will discuss the important concept of _linearity_ in quantum mechanics and learn about Dirac's notation for quantum mechanics.
+In the next post, we will discuss wave functions in greater detail. We will also discuss the important concept of _linearity_ in quantum mechanics and develop some additional intuition regarding linear operators.
 
 
 
