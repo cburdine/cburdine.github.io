@@ -24,7 +24,7 @@ Materials + ML Course
 
 ![Materials + ML](images/matml_logo.svg)
 
-I am in the process of developing an open-source introductory workshop course in Machine Learning and its applications in Materials Science. I led the first iteration of this workshop at Baylor University in Summer 2023, and plan to continue revising and expanding the online content for the course. All course materials including lecture slides, recordings, Python code, etc. are available [here](https://cburdine.github.io/materials-ml-workshop) for free.
+I am in the process of developing an open-source introductory workshop course in Machine Learning and its applications in Materials Science. I led the first two iterations of this workshop at Baylor University in the Summers of 2023 and 2025, and I hope to continue revising and expanding the online content for the course. All course materials including lecture slides, recordings, Python code, etc. are available [here](https://cburdine.github.io/materials-ml-workshop) for free.
 
 About this Website
 ------

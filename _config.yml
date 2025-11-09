@@ -82,11 +82,11 @@ analytics:
 author:
   name             : "Colin Burdine"
   avatar           : "burdine_head.png"
-  bio              : "A renegade computer scientist interested in quantum computing, machine learning, and mathematics."
+  bio              : "A renegade computer scientist researching quantum computing, machine learning, and materials science."
   location         : "Baylor University"
   employer         :
   pubmed           :  #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    :  #"http://yourfullgooglescholarurl.com"
+  googlescholar    :  "https://scholar.google.com/citations?hl=en&user=3F7Nd94AAAAJ"
   email            :
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
